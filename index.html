@@ -2,12 +2,34 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>	</title>
+	<title>Clock</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-	
+	<script>
+	function startTime() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		var s = today.getSeconds();
+		m = checkTime(m);
+		s = checkTime(s);
 
-<script src="../clock/time.js"></script>
+	document.getElementById('txt').innerHTML = 
+	h + ":" + m + ":" + s;
+	var t = setTimeout(startTime, 500);
+	}
+
+	function checkTime(i) {
+		if (i < 10) {i = "0" + i};
+		return i;
+	}
+	</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+
+	
 </body>
+
 </html>
