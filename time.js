@@ -1,17 +1,14 @@
 function startTime() {
 	var today = new Date();
-	var h = today.getHours();
+	var h = today.getHours() > 12 ? today.getHours() - 12 : today.getHours();
 	var m = today.getMinutes();
 	var s = today.getSeconds();
+	h = checkTime(h);
 	m = checkTime(m);
 	s = checkTime(s);
-	/*var ampm = hours >= 12 ? 'PM' : 'AM';
-	hours = hours % 12;
-	hours = hours ? hours : 12;*/
-
 
 	document.getElementById('txt').innerHTML = 
-	h + ":" + m + ":" + s + ampm;
+	h + ":" + m + ":" + s;
 	var t = setTimeout(startTime, 500);
 }
 

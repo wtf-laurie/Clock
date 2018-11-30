@@ -2,6 +2,19 @@ body {
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(45deg, #fbd0b6, #f4a9c5, #d5b2d5, #c1bbde, #9dcaee);
+	animation: Gradient 15s ease infinite;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
 }
 
 .border {
