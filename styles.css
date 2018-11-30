@@ -1,0 +1,26 @@
+body {
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(45deg, #fbd0b6, #f4a9c5, #d5b2d5, #c1bbde, #9dcaee);
+}
+
+.border {
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 10px;
+	border-color: #dce6f7;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+#txt {
+	color: #dce6f7;
+	letter-spacing: 2px;
+	text-align: center;
+	font-family: Bebas Neue;
+	font-size: 100px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 25%;
+}

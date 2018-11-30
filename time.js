@@ -5,9 +5,13 @@ function startTime() {
 	var s = today.getSeconds();
 	m = checkTime(m);
 	s = checkTime(s);
+	/*var ampm = hours >= 12 ? 'PM' : 'AM';
+	hours = hours % 12;
+	hours = hours ? hours : 12;*/
+
 
 	document.getElementById('txt').innerHTML = 
-	h + ":" + m + ":" + s;
+	h + ":" + m + ":" + s + ampm;
 	var t = setTimeout(startTime, 500);
 }
 
