@@ -1,26 +1,67 @@
-body {
+html {
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(45deg, #fbd0b6, #f4a9c5, #d5b2d5, #c1bbde, #9dcaee);
+	background-size: 500% 500%; 
+	-webkit-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
 }
 
-.border {
-	border-style: solid;
-	border-radius: 10px;
-	border-width: 10px;
-	border-color: #dce6f7;
-	margin-left: 20%;
-	margin-right: 20%;
+@-webkit-keyframes Gradient {
+	0% {background-position: 0% 50%}
+	50% {background-position: 100% 50%}
+	100% {background-position: 0% 50%}
 }
 
-#txt {
-	color: #dce6f7;
-	letter-spacing: 2px;
+@keyframes Gradient {
+	0% {background-position: 0% 50%}
+	50% {background-position: 100% 50%}
+	100% {background-position: 0% 50%}
+}
+
+
+.center {
+	display: block;
+	width: 100%;
+	height: 250px;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	text-align: center;
-	font-family: Bebas Neue;
-	font-size: 100px;
 	position: absolute;
-	right: 0;
-	left: 0;
-	top: 25%;
+}
+
+#time, #am_pm, #date, #day {
+	font-family: Bebas Neue;
+	color: #FFFFFF;
+	letter-spacing: 5px;
+	font-weight: 600;
+}
+
+#time {
+	display: inline-block;
+	position: relative;
+	margin-top: -10px;
+	font-size: 1050%;
+	text-align: center;
+	line-height: 1
+}
+
+#time #am_pm {
+	position: absolute;
+	left: 102%;
+	bottom: 9%;
+}
+
+#am_pm {
+	font-size: 300%;
+	margin-left: 5px;
+}
+
+#date {
+	font-size: 400%;
+}
+
+#day {
+	font-size: 500%;
 }

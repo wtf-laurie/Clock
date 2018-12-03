@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
 	<title>Clock</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src="time.js"></script>
 </head>
-
-<body onload="startTime()">
-
-		<p class="border" id="txt"></p>
+<body onload="formatTime(); formatDate(); formatDay(); setImage();">
+	
+	<div class="center">
+		<div><img id="icon" src="icons/sun.png"></div>
+		<div class="clock" id="time"></div>
+		<span id="am_pm"></span>
+		<div id="date"></div>
+		<div id="day"></div>
+	</div>
 
 </body>
-
 </html>
